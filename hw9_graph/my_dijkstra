@@ -1,0 +1,29 @@
+my dijkstra's:
+
+		g.resetVerts();
+		PriorityQueue<Vertex> pq = new PriorityQueue<>(new VertexComparator());
+		vsrc.mark();
+		vsrc.setCost(0);
+		pq.offer(vsrc);
+		
+		while(!pq.isEmpty()) {
+			Vertex currV = pq.poll();
+			TreeMap<String, Edge> adj = currV.getAdj();
+			
+			for (Edge e : adj.values()) {
+				Vertex dst = e.getDst();
+				double nw = currV.getCost() + e.getWeight();
+				
+				if (!dst.isMarked()) { // if dst is new
+					dst.mark();
+					dst.setPred(currV);
+					dst.setCost(nw);
+					pq.offer(dst);
+				} else if (nw < dst.getCost()) { // dst is not new but found a shorter path
+					pq.remove(dst);
+					dst.setCost(nw);
+					dst.setPred(currV);
+					pq.offer(dst);
+				}
+			}
+		}

@@ -1,0 +1,151 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class DisjointSet<E> {
+	
+	HashMap<E, DSNode> set;
+	
+	public DisjointSet(Iterable<E> items) {
+		set = new HashMap<E, DSNode>();
+		for (E item : items) {
+			DSNode node = new DSNode(item);
+			set.put(item, node);
+		}	
+	}
+	
+//	/**
+//	 * 
+//	 * @param item
+//	 * @return 
+//	 */
+//	public E findRep(E item) {
+//		DSNode node = set.get(item);
+//		DSNode ptr = node;
+//		E data = ptr.data;
+//		E rep = ptr.rep;
+//		E root = null;
+//		
+//		while (!data.equals(rep)) {
+//			ptr = set.get(rep);
+//			data = ptr.data;
+//			rep = ptr.rep;
+////			System.out.println("1");
+//		}
+//		
+//		root = rep;
+//		
+//		// path-compress
+//		ptr = node;
+//		data = ptr.data;
+//		while (!data.equals(root)) {
+//			rep = ptr.rep; 		  // store the old rep
+//			ptr.rep = root; 	  // assign root as new rep
+//			ptr.rank = 0;
+//			ptr = set.get(rep);   // set pointer to the node of the old rep
+//			data = ptr.data;      // update data
+//		}
+//
+//		return root;
+//	}
+	
+	public E findRep(E item) {
+		DSNode node = set.get(item);
+		E rep = node.rep;
+		if (item.equals(rep)) {
+			return rep;
+		}
+		
+		rep = findRep(rep);
+		node.rep = rep;
+		return rep;
+	}
+	
+	
+	public void union(E d1, E d2) {
+		E rep1 = findRep(d1);
+		E rep2 = findRep(d2);
+		
+		if (rep1.equals(rep2)) {
+			return;
+		}
+		
+		DSNode node1 = set.get(rep1);
+		DSNode node2 = set.get(rep2);
+		
+		if (node1.rank > node2.rank) {
+			node2.rep = rep1;
+		} else if (node1.rank < node2.rank) {
+			node1.rep = rep2;
+		} else {
+			node2.rep = rep1;
+			node1.rank++;
+		}
+	}
+	
+	public String toString() {
+		return set.toString();
+	}
+	
+	
+	private class DSNode {
+		E data;
+		E rep;
+		int rank;
+		
+		public DSNode(E data) {
+			this.data = data;
+			rep = data;
+			rank = 0;
+		}
+		
+		@Override
+		public String toString() {
+			return String.format("( %s, %s, %d )", data.toString(), rep.toString(), rank);
+		}
+	}
+	
+	public static void main(String[] args) {
+		ArrayList<String> letters = new ArrayList<String>();
+		letters.add("A");
+		letters.add("B");
+		letters.add("C");
+		letters.add("D");
+		letters.add("E");
+		letters.add("F");
+		letters.add("G");
+		letters.add("H");
+
+		DisjointSet<String> dset = new DisjointSet<String>(letters);
+
+		System.out.println("DisjointSet with: " + letters);
+		System.out.println(dset);
+
+		System.out.println("\nunion('A', 'B')");
+		dset.union("A", "B");
+		System.out.println(dset);
+
+		System.out.println("\nunion('B', 'C')");
+		dset.union("B", "C");
+		System.out.println(dset);
+
+		System.out.println("\nunion('E', 'F')");
+		dset.union("E", "F");
+		System.out.println(dset);
+
+		System.out.println("\nunion('G', 'H')");
+		dset.union("G", "H");
+		System.out.println(dset);
+
+		System.out.println("\nunion('C', 'H')");
+		dset.union("C", "H");
+		System.out.println(dset);
+
+		System.out.println("\nunion('G', 'F')");
+		dset.union("G", "F");
+		System.out.println(dset);
+
+		System.out.println("\nunion('D', 'H')");
+		dset.union("D", "H");
+		System.out.println(dset);
+	}
+}

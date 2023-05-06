@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="getMat"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="true"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="getMat"/>
+			<item value="adj"/>
+			<item value="children.size"/>
+			<item value="keys.size()"/>
+			<item value="LinkedList"/>
+			<item value="system"/>
+			<item value="leaves"/>
+			<item value="toString"/>
+			<item value="this."/>
+			<item value="tree"/>
+			<item value="isLeaf"/>
+			<item value="print"/>
+			<item value="println"/>
+			<item value="add"/>
+			<item value="lastChild"/>
+		</list>
+		<list key="replacehistory">
+			<item value="nChildren"/>
+			<item value="nKeys()"/>
+			<item value="nodes"/>
+			<item value="stree"/>
+			<item value="cap"/>
+			<item value="Mouse"/>
+			<item value="head"/>
+			<item value="size"/>
+			<item value="dummyHead"/>
+			<item value="DNode"/>
+			<item value="buttons"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1060"/>
+		<item key="DIALOG_Y_ORIGIN" value="217"/>
+		<item key="DIALOG_WIDTH" value="350"/>
+		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

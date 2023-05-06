@@ -1,0 +1,90 @@
+Q. write an efficient instance method for DList, replaceAll(E oldV, E newV),
+   replaces all occurrences of oldV with newV, and return the # of replacements
+   the method made
+
+//O(N)
+
+int replaceAll(E oldV, E newV) {
+	
+	int count = 0;
+	
+	DNode<E> ptr = head.getNext();
+	
+	while (ptr != null) {
+		E curr = ptr.getData();
+		
+		if (oldVal.equals(curr)) {
+			ptr.setData(newV);
+			++count;
+		}
+		
+		ptr = ptr.getNext();
+	}
+	
+	return count;
+}
+
+
+Q. Write a method, postFixEval, which takes an array 
+ of Strings as post-fix and evaluates the expression 
+ and return the final value using a Stack. Assume
+ input expression is correct.
+
+// arithmetic operator: 
+
+// idea:
+   traverse through the array, see number, push to the 
+   stack, when see operator, pop two numbers off the stack,
+   compute the two numbers with the operator, push the value
+   to the stack. Continue the procedure.
+   
+   when the operator is -, / or %, order matters. Always do
+   poped2 (~) poped1
+  
+double postFixEval(String[] exp) {
+	
+	Stack<Double> stack = new Stack<>();
+	
+	for (String b : exp) {
+		if (s is NOT an operator) { //"+-*/".indexOf(s) < 0
+			stack.push(Double.parseDouble(s)); // auto-boxing
+		}
+		else {
+		double op2 = stack.pop(); // auto-unboxing
+		double op1 = stack.pop();
+		double res;
+		
+		if (s.equals("*") {
+			
+		}
+		else if (s.equals("+") {
+			
+		}
+		else if (s.equals("-") {
+			
+		}
+		else { // must be /
+			res = op1 / op2
+			
+		}
+		
+		stack.push(res);
+	}
+	
+	return stack.pop();	
+
+}
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

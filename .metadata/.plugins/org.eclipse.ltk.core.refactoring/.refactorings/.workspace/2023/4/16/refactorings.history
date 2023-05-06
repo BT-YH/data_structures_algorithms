@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;hw9_grpah&apos; to &apos;hw9_graph&apos;&#x0A;- Original element: &apos;hw9_grpah&apos;&#x0A;- Renamed element: &apos;hw9_grpah&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;hw9_grpah&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=hw9_grpah" name="hw9_graph" references="true" stamp="1681652057172" version="1.0"/>
+</session>

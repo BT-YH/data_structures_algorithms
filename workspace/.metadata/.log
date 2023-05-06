@@ -1,0 +1,20 @@
+!SESSION 2023-01-18 13:18:10.271 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data /Accounts/turing/students/s26/tangyi02/cs216/workspace -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.core 1 0 2023-01-18 13:18:12.135
+!MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2023-01-19 21:16:10.266 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data /Accounts/turing/students/s26/tangyi02/cs216/workspace -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.core 1 0 2023-01-19 21:16:12.196
+!MESSAGE Using Apache MINA sshd as ssh client.

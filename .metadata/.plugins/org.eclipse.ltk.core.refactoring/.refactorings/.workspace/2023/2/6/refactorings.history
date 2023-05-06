@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Maze&apos; to &apos;hw3_Maze&apos;" description="Rename resource &apos;Maze&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Maze" name="hw3_Maze" stamp="1676059997869" updateReferences="true"/>
+</session>
